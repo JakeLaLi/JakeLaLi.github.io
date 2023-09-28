@@ -36,9 +36,11 @@
   <script>
         function resizeIframe() {
             var iframe = document.getElementById('google-doc-iframe');
+            var newWidth = window.innerWidth; // Calculate new width
             var newHeight = window.innerHeight; // Use any desired calculation for height
 
             // Set the iframe's height to the new calculated height
+            iframe.style.width = newWidth + 'px';
             iframe.style.height = newHeight + 'px';
         }
 

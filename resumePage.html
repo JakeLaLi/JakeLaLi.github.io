@@ -30,7 +30,21 @@
 
   <h2>
     <!-- <center> <iframe src="https://drive.google.com/file/d/1DcmgE65d--2von85rcgutbnSMf0m-DBf/preview"  height="800px" width="80%" allow="autoplay"></iframe> <center> -->
-      <center> <iframe src="https://docs.google.com/document/d/e/2PACX-1vTCfvKh0PUkaK4IxBLcBNKO3LBbRqeF1sOXz-czn91O9z8Jh-K_q0nJtAW1qEJIWQ/pub?embedded=true"  height="1000px" width="1000px" allow="autoplay"></iframe> </center>
+      <center> <iframe id="google-doc-iframe" src="https://docs.google.com/document/d/e/2PACX-1vTCfvKh0PUkaK4IxBLcBNKO3LBbRqeF1sOXz-czn91O9z8Jh-K_q0nJtAW1qEJIWQ/pub?embedded=true"  height="1000px" width="1000px" allow="autoplay"></iframe> </center>
     </h2>
+
+  <script>
+        function resizeIframe() {
+            var iframe = document.getElementById('google-doc-iframe');
+            var newHeight = window.innerHeight; // Use any desired calculation for height
+
+            // Set the iframe's height to the new calculated height
+            iframe.style.height = newHeight + 'px';
+        }
+
+        // Initial resize and add a listener for window resize events
+        window.addEventListener('resize', resizeIframe);
+        resizeIframe();
+    </script>
 
   </body>

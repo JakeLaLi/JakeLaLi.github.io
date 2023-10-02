@@ -5,6 +5,20 @@
   <title>jakelali.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> 
+  <style>
+    .aspect-ratio {
+      position: relative;
+      width: 100%;
+      height: 0 auto;
+      padding-bottom: 75%; /* for a 4:3 aspect ratio */
+    }
+    .aspect-ratio object {
+      position: absolute;
+      width: 100%;
+      height: 150%;
+      left: 0; top: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,36 +33,30 @@
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="true" href="resumePage.html">Resume</a>
-<!--           </li>
-            <li class="nav-item">
+             </li>
+            <!--
+             <li class="nav-item">
               <a class="nav-link disabled" href="#">Projects</a>
-            </li> --> 
+            </li> 
+            --> 
           </ul>
       </div>
     </nav>
   </header>
+  
 
-  <h2>
-    <!-- <center> <iframe src="https://drive.google.com/file/d/1DcmgE65d--2von85rcgutbnSMf0m-DBf/preview"  height="800px" width="80%" allow="autoplay"></iframe> <center> -->
-     <center> <iframe id="google-doc-iframe" style="text-align:center; height:100vh; max-width:100vw;" src="https://docs.google.com/document/d/e/2PACX-1vTCfvKh0PUkaK4IxBLcBNKO3LBbRqeF1sOXz-czn91O9z8Jh-K_q0nJtAW1qEJIWQ/pub?embedded=true" allow="autoplay"></iframe> </center>
-    </h2>
-
-  <!--
-  <script>
-        function resizeIframe() {
-            var iframe = document.getElementById('google-doc-iframe');
-            var newWidth = window.innerWidth; // Calculate new width
-            var newHeight = window.innerHeight; // Use any desired calculation for height
-
-            // Set the iframe's height to the new calculated height
-            iframe.style.width = newWidth + 'px';
-            iframe.style.height = newHeight + 'px';
-        }
-
-        // Initial resize and add a listener for window resize events
-        window.addEventListener('resize', resizeIframe);
-        resizeIframe();
-    </script>
-    -->
-
-  </body>
+  <div class="container">
+    <div class="center-card">
+            <div class="card-body">
+                <h5 class="card-title">My Resume</h5>
+                <div class="aspect-ratio">
+                  <object data="JakesResumeDraft2.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="/path/to/your/resume.pdf">click here to download the PDF file.</a></p>
+                  </object>
+                </div>
+        </div>
+    </div>
+  </div>
+  
+</body>
+</html>
